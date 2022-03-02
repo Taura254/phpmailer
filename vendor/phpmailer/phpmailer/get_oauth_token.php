@@ -58,7 +58,8 @@ if (!isset($_GET['code']) && !isset($_GET['provider'])) {
     exit;
 }
 
-require 'vendor/autoload.php';
+require_once 'C:\xampp\htdocs\phpmailer\vendor\phpmailer\phpmailer\get_oauth_token.php';
+
 
 session_start();
 
@@ -76,8 +77,8 @@ if (!in_array($providerName, ['Google', 'Microsoft', 'Yahoo'])) {
 
 //These details are obtained by setting up an app in the Google developer console,
 //or whichever provider you're using.
-$clientId = 'RANDOMCHARS-----duv1n2.apps.googleusercontent.com';
-$clientSecret = 'RANDOMCHARS-----lGyjPcRtvP';
+$clientId = '266541438561-cu9qp7j02pnim4fm0l2hc66c1lhg0oa3.apps.googleusercontent.com';
+$clientSecret = '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';
 
 //If this automatic URL doesn't work, set it yourself manually to the URL of this script
 $redirectUri = (isset($_SERVER['HTTPS']) ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
